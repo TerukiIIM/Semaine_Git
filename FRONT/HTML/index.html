@@ -6,18 +6,53 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
     
     <!-- TITLE -->
-    <title>Site convertion</title>
+    <title>Site conversion</title>
 
     <!-- LOGO -->
-    <link rel="icon" type="image/x-icon" href="../IMG/">
+    <link rel="icon" type="image/x-icon" href="../IMG/favicon.ico">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="../CSS/style.css">
 </head>
 <body>
-    
+    <div class="box">
+        <h2>Convertisseur de devises</h2>
+        <div class="input">
+            <label for="first-value">Entrez un montant</label>
+            <input type="number" name="first-value" id="first-value" placeholder="Entrez un montant">
+        </div>
+        <div class="input">
+            <label for="from-currency">De</label>
+            <select id="from-currency">
+                <option value="USD">USD - Dollar Américain</option>
+                <option value="EUR">EUR - Euro</option>
+                <option value="GBP">GBP - Livre Sterling</option>
+            </select>
+        </div>
+        <div class="input">
+            <label for="to-currency">Vers</label>
+            <select id="to-currency">
+                <option value="USD">USD - Dollar Américain</option>
+                <option value="EUR">EUR - Euro</option>
+                <option value="GBP">GBP - Livre Sterling</option>
+            </select>
+        </div>
+        <div class="input">
+            <label for="exchange-rate">Taux de change</label>
+            <input type="text" id="exchange-rate" readonly placeholder="Taux de change">
+        </div>
+        <div class="input">
+            <button id="convert-button">Convertir</button>
+        </div>
+        <div class="input">
+            <label for="second-value">Montant converti</label>
+            <input type="text" id="second-value" readonly placeholder="Montant converti">
+        </div>
+    </div>
+
     <script src="../JS/script.js"></script>
 </body>
 </html>
