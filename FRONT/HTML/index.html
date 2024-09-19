@@ -1,76 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="author" content="" />
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="stylesheet" href="style.css" />
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <!-- TITLE -->
-    <title>Site conversion</title>
+        <!-- TITLE -->
+        <title>Site conversion</title>
 
-    <!-- LOGO -->
-    <link rel="icon" type="image/x-icon" href="../IMG/favicon.ico" />
+        <!-- LOGO -->
+        <!-- <link rel="icon" type="image/x-icon" href="../IMG/"> -->
 
-    <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="../CSS/style.css" />
-  </head>
-  <body>
-    <div class="box">
-      <h2>Convertisseur de devises</h2>
-      <div class="input">
-        <label for="first-value">Entrez un montant</label>
-        <input
-          type="number"
-          name="first-value"
-          id="first-value"
-          placeholder="Entrez un montant"
-        />
-      </div>
-      <div class="input">
-        <label for="from-currency">De</label>
-        <select id="from-currency">
-          <option value="">--Sélectionner une devise--</option>
-          <!-- <option value="USD">USD - Dollar Américain</option>
-                <option value="EUR">EUR - Euro</option>
-                <option value="GBP">GBP - Livre Sterling</option> -->
-        </select>
-      </div>
-      <div class="input">
-        <label for="to-currency">Vers</label>
-        <select id="to-currency">
-          <option value="">--Sélectionner une devise--</option>
-          <!-- <option value="USD">USD - Dollar Américain</option>
-                <option value="EUR">EUR - Euro</option>
-                <option value="GBP">GBP - Livre Sterling</option> -->
-        </select>
-      </div>
-      <div class="input">
-        <label for="exchange-rate">Taux de change</label>
-        <input
-          type="text"
-          id="exchange-rate"
-          readonly
-          placeholder="Taux de change"
-        />
-      </div>
-      <div class="input">
-        <button id="convert-button">Convertir</button>
-      </div>
-      <div class="input">
-        <label for="second-value">Montant converti</label>
-        <input
-          type="text"
-          id="second-value"
-          readonly
-          placeholder="Montant converti"
-        />
-      </div>
-    </div>
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+    </head>
 
-    <script src="../JS/script.js"></script>
-    <script src="/BACK/script.js"></script>
-  </body>
+    <body>
+        <div class="conversion">
+            <h2>Convertisseur de devises</h2>
+
+            <div class="from">
+                <div class="input">
+                    <label for="amount">Entrez un montant</label>
+                    <input type="number" name="amount" id="amount" placeholder="Entrez un montant" oninput="convertCurrency()">
+                </div>
+
+                <div class="input">
+                    <label for="from_currency">De</label>
+                    <select id="from_currency" onchange="convertCurrency()">
+                    </select>
+                </div>
+            </div>
+
+            <div class="to">
+                <div class="input">
+                    <label for="result">Montant converti</label>
+                    <input type="text" name="result" id="result" readonly placeholder="Montant converti" disabled>
+                </div>
+
+                <div class="input">
+                    <label for="to_currency">Vers</label>
+                    <select id="to_currency" onchange="convertCurrency()">
+                    </select>
+                </div>
+            </div>
+
+            <div class="rate">
+                <div class="input">
+                    <label for="exchange_rate">Taux de change</label>
+                    <input type="text" name="exchange_rate" id="exchange_rate" readonly placeholder="Taux de change" disabled>
+                </div>
+            </div>
+        </div>
+
+        <script src="../../BACK/index.js"></script>
+        <script src="../JS/script.js"></script>
+    </body>
 </html>
