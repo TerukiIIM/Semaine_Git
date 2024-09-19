@@ -1,5 +1,13 @@
 # Introduction Git
 
+## Contributeurs
+
+> Jérôme ZHAO ([TerukiIIM](https://github.com/TerukiIIM))
+
+> Émilie XU ([emoliie](https://github.com/emoliie))
+
+> Thomas DURAND ([t-drnd](https://github.com/t-drnd))
+
 ## Convertisseur de Devises
 
 Bienvenue dans le convertisseur de devises ! Cette application vous permet de convertir des montants entre différentes devises en utilisant les taux de change en temps réel. Que vous souhaitiez convertir des euros en dollars, des livres sterling en yen, ou toute autre combinaison de devises, cet outil est conçu pour vous offrir une solution simple et rapide.
